@@ -1,6 +1,8 @@
 // Copyright 2020 Cuong Manh Le. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
+
+// Package managesieve implements ManageSieve client protocol.
 package managesieve
 
 import (
@@ -25,7 +27,7 @@ type Client struct {
 // ClientOption configures Client.
 type ClientOption func(*Client) error
 
-// WithSeverAddress sets the managesieve server address of Client.
+// WithServerAddress sets the managesieve server address of Client.
 func WithServerAddress(addr string) ClientOption {
 	return func(c *Client) error {
 		c.addr = addr
@@ -91,24 +93,30 @@ func (c *Client) runCmd(cmd string, args ...string) error {
 	return c.readResponse()
 }
 
+// Login authenticates with managesieve server with given username and password,
+// using PLAIN auth.
 func (c *Client) Login(user, pass string) error {
 	auth := base64.StdEncoding.EncodeToString([]byte("\x00" + user + "\x00" + pass))
 	return c.runCmd("AUTHENTICATE", "PLAIN", auth)
 }
 
+// GetScript gets sieve script by name.
 func (c *Client) GetScript(name string) error {
 	return c.runCmd("GETSCRIPT", name)
 }
 
+// PutScript replace a sieve script with new content.
 func (c *Client) PutScript(name string, content string) error {
 	content = fmt.Sprintf("{%d+}\r\n%s", len(content), content)
 	return c.runCmd("PUTSCRIPT", name, content)
 }
 
+// SetActive marks the sieve script active.
 func (c *Client) SetActive(name string) error {
 	return c.runCmd("SETACTIVE", name)
 }
 
+// DeleteScript deletes a sieve script by name.
 func (c *Client) DeleteScript(name string) error {
 	return c.runCmd("DELETESCRIPT", name)
 }
