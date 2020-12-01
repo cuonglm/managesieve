@@ -1,6 +1,6 @@
 # managesieve
 
-[![Build Status](https://travis-ci.org/cuonglm/managesieve.svg?branch=master)](https://travis-ci.org/cuonglm/managesieve)
+![Build status](https://github.com/cuonglm/managesieve/workflows/Go/badge.svg?branch=master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/cuonglm/managesieve)](https://goreportcard.com/report/github.com/cuonglm/managesieve)
 [![GoDoc](https://godoc.org/github.com/cuonglm/managesieve?status.svg)](https://godoc.org/github.com/cuonglm/managesieve)
 
