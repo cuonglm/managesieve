@@ -1,6 +1,6 @@
 # managesieve
 
-![Build status](https://github.com/cuonglm/managesieve/workflows/ci/badge.svg?branch=main)
+![Build status](https://github.com/cuonglm/managesieve/actions/workflows/ci.yaml/badge.svg?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/cuonglm/managesieve)](https://goreportcard.com/report/github.com/cuonglm/managesieve)
 [![GoDoc](https://godoc.org/github.com/cuonglm/managesieve?status.svg)](https://godoc.org/github.com/cuonglm/managesieve)
 
