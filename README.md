@@ -1,6 +1,6 @@
 # managesieve
 
-![Build status](https://github.com/cuonglm/managesieve/workflows/Go/badge.svg?branch=master)
+![Build status](https://github.com/cuonglm/managesieve/workflows/Go/badge.svg?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/cuonglm/managesieve)](https://goreportcard.com/report/github.com/cuonglm/managesieve)
 [![GoDoc](https://godoc.org/github.com/cuonglm/managesieve?status.svg)](https://godoc.org/github.com/cuonglm/managesieve)
 
@@ -12,4 +12,4 @@ Cuong Manh Le <cuong.manhle.vn@gmail.com>
 
 # License
 
-See [LICENSE](https://github.com/cuonglm/managesieve/blob/master/LICENSE)
+See [LICENSE](https://github.com/cuonglm/managesieve/blob/main/LICENSE)
